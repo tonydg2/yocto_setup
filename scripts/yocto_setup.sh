@@ -4,7 +4,7 @@ cd ../../
 mkdir sources
 cd sources
 git clone https://github.com/tonydg2/meta-adghw.git
-git clone -b "u96" https://github.com/tonydg2/meta-adglayer.git
+git clone -b "zc702" https://github.com/tonydg2/meta-adglayer.git
 
 BRANCH="rel-v2023.2"
 
@@ -60,4 +60,4 @@ bitbake-layers add-layer ../sources/meta-adglayer
 mv conf/local.conf conf/local.conf.DEFAULT
 cp ../yocto_setup/files/local.conf conf/local.conf
 
-#MACHINE=myhardware-u96v2-zynqmp bitbake u96-image
+#   MACHINE=myhardware-zc702-zynq bitbake zc702-image
