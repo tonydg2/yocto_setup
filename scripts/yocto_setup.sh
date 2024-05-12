@@ -56,4 +56,8 @@ bitbake-layers add-layer ../sources/meta-virtualization
 bitbake-layers add-layer ../sources/meta-adglayer
 
 # update local.conf if necessary
+# in build dir
+mv conf/local.conf conf/local.conf.DEFAULT
+cp ../yocto_setup/files/local.conf conf/local.conf
+
 #MACHINE=myhardware-u96v2-zynqmp bitbake u96-image

@@ -4,7 +4,7 @@ cwd=$(pwd)
 
 BRANCH="rel-v2023.2"
 
-cd sources/meta-openamp
+cd ../../sources/meta-openamp
 git checkout $BRANCH
 cd ../meta-openembedded
 git checkout $BRANCH
