@@ -8,7 +8,9 @@ if [ -z "$1" ]; then
 fi
 
 DEVICE_PATH=$1
-IMAGE_PATH="../../build/tmp/deploy/images/myhardware-u96v2-zynqmp/u96-image-myhardware-u96v2-zynqmp.wic"
+
+#IMAGE_PATH="../../build/tmp/deploy/images/myhardware-u96v2-zynqmp/u96-image-myhardware-u96v2-zynqmp.wic"
+IMAGE_PATH="../../build/tmp/deploy/images/hw-u96/u96-image-hw-u96.wic"
 
 # Display block device list
 echo "Current block devices:"
@@ -30,3 +32,6 @@ else
     echo "Operation canceled."
     exit 2
 fi
+echo "---------------------------------------------------------"
+echo "            DONE"
+echo "---------------------------------------------------------"
