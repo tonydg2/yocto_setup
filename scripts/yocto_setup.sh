@@ -1,5 +1,9 @@
 #!/bin/bash
 
+CWD=$(pwd)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
 cd ../../
 mkdir sources
 cd sources
@@ -22,7 +26,7 @@ git clone -b $BRANCH https://github.com/Xilinx/poky.git
 # yuk!
 cd meta-xilinx
 git submodule update --init --recursive
-cd cd meta-xilinx-core/gen-machine-conf
+cd meta-xilinx-core/gen-machine-conf
 git checkout $META_XLNX_SUBMOD_BRNCH
 cd ../../../../
 
