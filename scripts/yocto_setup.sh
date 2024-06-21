@@ -71,4 +71,4 @@ bitbake-layers add-layer ../sources/meta-adglayer
 mv conf/local.conf conf/local.conf.DEFAULT
 cp ../yocto_setup/files/local.conf conf/local.conf
 
-#MACHINE=myhardware-u96v2-zynqmp bitbake u96-image
+#MACHINE=hw-u96 bitbake petalinux-image-minimal
