@@ -17,7 +17,8 @@ for dir in */ ; do
     if [ -d "${dir}/.git" ]; then
         echo -n "Repo $dir is on branch: "
         # Get the current Git branch for the repository
-        (cd "$dir" && git rev-parse --abbrev-ref HEAD && git status)
+        (cd "$dir" && git rev-parse --abbrev-ref HEAD && git status && git submodule status)
+        echo "------------------------"
     fi
 done
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+start_time=$(date +%s)
+
 # Check if the device path is provided
 if [ -z "$1" ]; then
     echo "Usage: $0 <device_path>"
@@ -10,7 +12,9 @@ fi
 DEVICE_PATH=$1
 
 #IMAGE_PATH="../../build/tmp/deploy/images/myhardware-u96v2-zynqmp/u96-image-myhardware-u96v2-zynqmp.wic"
-IMAGE_PATH="../../build/tmp/deploy/images/hw-u96/u96-image-hw-u96.wic"
+#IMAGE_PATH="../../build/tmp/deploy/images/hw-u96/u96-image-hw-u96.wic"
+IMAGE_PATH="../../build/tmp/deploy/images/hw-u96/petalinux-image-minimal-hw-u96.wic"
+
 
 # Display block device list
 echo "Current block devices:"
@@ -32,6 +36,11 @@ else
     echo "Operation canceled."
     exit 2
 fi
+end_time=$(date +%s)
+duration=$((end_time - start_time))
+minutes=$((duration / 60))
+seconds=$((duration % 60))
 echo "---------------------------------------------------------"
-echo "            DONE"
+echo "DONE"
+echo "${minutes}m : ${seconds}s"
 echo "---------------------------------------------------------"

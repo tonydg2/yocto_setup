@@ -3,10 +3,11 @@
 cd ../../
 mkdir sources
 cd sources
-git clone https://github.com/tonydg2/meta-adghw.git
-git clone -b "u96" https://github.com/tonydg2/meta-adglayer.git
+git clone -b "u96-avnet" https://github.com/tonydg2/meta-adghw.git
+git clone -b "u96_avnet" https://github.com/tonydg2/meta-adglayer.git
 
 BRANCH="rel-v2023.2"
+META_XLNX_SUBMOD_BRNCH="xlnx_rel_v2023.2"
 
 git clone -b $BRANCH https://github.com/Xilinx/meta-openamp.git
 git clone -b $BRANCH https://github.com/Xilinx/meta-openembedded.git
@@ -18,7 +19,13 @@ git clone -b $BRANCH https://github.com/Xilinx/meta-xilinx.git
 git clone -b $BRANCH https://github.com/Xilinx/meta-xilinx-tools.git
 git clone -b $BRANCH https://github.com/Xilinx/poky.git
 
-cd ..
+# yuk!
+cd meta-xilinx
+git submodule update --init --recursive
+cd cd meta-xilinx-core/gen-machine-conf
+git checkout $META_XLNX_SUBMOD_BRNCH
+cd ../../../../
+
 source sources/poky/oe-init-build-env
 
 ## add layers manually
