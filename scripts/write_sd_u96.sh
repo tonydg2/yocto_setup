@@ -22,7 +22,8 @@ DEVICE_PATH=$1
 #IMAGE_PATH="../../build/tmp/deploy/images/hw-u96/u96-image-hw-u96.wic"
 #IMAGE_PATH="../../build/tmp/deploy/images/hw-u96/petalinux-image-minimal-hw-u96.wic"
 IMAGE_DIR="../../build/tmp/deploy/images/hw-u96"
-IMAGE_NAME="petalinux-image-minimal-hw-u96.wic"
+#IMAGE_NAME="petalinux-image-minimal-hw-u96.wic"
+IMAGE_NAME="u96-img-hw-u96.wic"
 
 cd "$IMAGE_DIR"
 IMAGE_PATH_ABS=$(pwd)
