@@ -57,6 +57,7 @@ minutes=$((duration / 60))
 seconds=$((duration % 60))
 echo "---------------------------------------------------------"
 echo "DONE"
+echo "DATE: $(date "+%Y-%m-%d  %H:%M:%S")"
 echo "${minutes}m : ${seconds}s"
 echo "---------------------------------------------------------"
 cd "$CWD"
