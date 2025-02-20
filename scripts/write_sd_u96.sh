@@ -61,3 +61,8 @@ echo "DATE: $(date "+%Y-%m-%d  %H:%M:%S")"
 echo "${minutes}m : ${seconds}s"
 echo "---------------------------------------------------------"
 cd "$CWD"
+
+#beep
+DELAY=0.2;
+#echo -e "\a";sleep $DELAY;echo -e "\a";sleep $DELAY;echo -e "\a"
+echo -ne '\007';sleep $DELAY;echo -ne '\007';sleep $DELAY;echo -ne '\007'
