@@ -23,6 +23,9 @@ git clone -b $BRANCH https://github.com/Xilinx/meta-xilinx.git
 git clone -b $BRANCH https://github.com/Xilinx/meta-xilinx-tools.git
 git clone -b $BRANCH https://github.com/Xilinx/poky.git
 
+# added ONSEMI late for dual cam
+git clone -b "2023.2" https://github.com/Avnet/meta-on-semiconductor.git 
+
 # yuk!
 cd meta-xilinx
 git submodule update --init --recursive
@@ -65,6 +68,7 @@ bitbake-layers add-layer ../sources/meta-xilinx/meta-xilinx-vendor
 bitbake-layers add-layer ../sources/meta-xilinx-tools
 bitbake-layers add-layer ../sources/meta-virtualization
 bitbake-layers add-layer ../sources/meta-adglayer
+bitbake-layers add-layer ../sources/meta-on-semiconductor
 
 # update local.conf if necessary
 # in build dir
