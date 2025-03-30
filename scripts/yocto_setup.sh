@@ -7,8 +7,15 @@ cd "$SCRIPT_DIR"
 cd ../../
 mkdir sources
 cd sources
-git clone -b "u96-avnet" https://github.com/tonydg2/meta-adghw.git
-git clone -b "u96_avnet" https://github.com/tonydg2/meta-adglayer.git
+
+# ** Notice the dash and underscore in branch:
+#git clone -b "u96-avnet" https://github.com/tonydg2/meta-adghw.git
+#git clone -b "u96_avnet" https://github.com/tonydg2/meta-adglayer.git
+
+ADG_BRANCH="u96_dualcam"
+git clone -b $ADG_BRANCH https://github.com/tonydg2/meta-adghw.git
+git clone -b $ADG_BRANCH https://github.com/tonydg2/meta-adglayer.git
+
 
 BRANCH="rel-v2023.2"
 META_XLNX_SUBMOD_BRNCH="xlnx_rel_v2023.2"
