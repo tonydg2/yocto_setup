@@ -83,3 +83,4 @@ mv conf/local.conf conf/local.conf.DEFAULT
 cp ../yocto_setup/files/local.conf conf/local.conf
 
 #MACHINE=hw-u96 bitbake petalinux-image-minimal
+#MACHINE=hw-u96 bitbake u96-img
